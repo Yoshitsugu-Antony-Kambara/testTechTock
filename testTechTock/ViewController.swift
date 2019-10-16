@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         title = "記事一覧"
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         
         getArticles()
@@ -55,13 +56,13 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articles.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = articles[indexPath.row][0]
         return cell
     }
@@ -71,6 +72,9 @@ extension ViewController: UITableViewDataSource {
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        print("\(indexPath.row)th cell is celected")
+        
+        //tableView.deselectRow(at: indexPath, animated: true)
         print("selected")
 
         selectUrl = articles[indexPath.row][1]
