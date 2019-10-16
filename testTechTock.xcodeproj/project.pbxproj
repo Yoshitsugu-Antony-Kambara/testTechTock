@@ -13,6 +13,7 @@
 		14CB364B23570E1D00D8BB7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CB364923570E1D00D8BB7C /* Main.storyboard */; };
 		14CB364D23570E1F00D8BB7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CB364C23570E1F00D8BB7C /* Assets.xcassets */; };
 		14CB365023570E1F00D8BB7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CB364E23570E1F00D8BB7C /* LaunchScreen.storyboard */; };
+		DF6F9BFA9A006CDADD1D879C /* Pods_testTechTock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39DBB8CCA46C4494F33EAEF /* Pods_testTechTock.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		14CB364C23570E1F00D8BB7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14CB364F23570E1F00D8BB7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14CB365123570E1F00D8BB7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		345AB415A88D125C970DA2F2 /* Pods-testTechTock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTechTock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testTechTock/Pods-testTechTock.debug.xcconfig"; sourceTree = "<group>"; };
+		9F4A8646566CBC0F1D3704C2 /* Pods-testTechTock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTechTock.release.xcconfig"; path = "Pods/Target Support Files/Pods-testTechTock/Pods-testTechTock.release.xcconfig"; sourceTree = "<group>"; };
+		C39DBB8CCA46C4494F33EAEF /* Pods_testTechTock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testTechTock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6F9BFA9A006CDADD1D879C /* Pods_testTechTock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				14CB364223570E1D00D8BB7C /* testTechTock */,
 				14CB364123570E1D00D8BB7C /* Products */,
+				2CC05959A3CA7E6F03A23758 /* Pods */,
+				6A74A92DD7D1E3DFC9095867 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = testTechTock;
 			sourceTree = "<group>";
 		};
+		2CC05959A3CA7E6F03A23758 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				345AB415A88D125C970DA2F2 /* Pods-testTechTock.debug.xcconfig */,
+				9F4A8646566CBC0F1D3704C2 /* Pods-testTechTock.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A74A92DD7D1E3DFC9095867 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C39DBB8CCA46C4494F33EAEF /* Pods_testTechTock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14CB365423570E1F00D8BB7C /* Build configuration list for PBXNativeTarget "testTechTock" */;
 			buildPhases = (
+				B5F9BE9F52034CAFE63D1915 /* [CP] Check Pods Manifest.lock */,
 				14CB363C23570E1D00D8BB7C /* Sources */,
 				14CB363D23570E1D00D8BB7C /* Frameworks */,
 				14CB363E23570E1D00D8BB7C /* Resources */,
+				9A7EFCFF240EC50761AA27F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A7EFCFF240EC50761AA27F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-testTechTock/Pods-testTechTock-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-testTechTock/Pods-testTechTock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5F9BE9F52034CAFE63D1915 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-testTechTock-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		14CB363C23570E1D00D8BB7C /* Sources */ = {
@@ -282,6 +357,7 @@
 		};
 		14CB365523570E1F00D8BB7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 345AB415A88D125C970DA2F2 /* Pods-testTechTock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +376,7 @@
 		};
 		14CB365623570E1F00D8BB7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F4A8646566CBC0F1D3704C2 /* Pods-testTechTock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
