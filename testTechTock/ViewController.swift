@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     func getArticles() {
         Alamofire.request("https://qiita.com/api/v2/items")
             .responseJSON { response in
-                //print(response.result.value as Any)
+                print(response.result.value as Any)
                 guard let object = response.result.value else {
                     return
                 }
@@ -68,18 +68,18 @@ extension ViewController: UITableViewDataSource {
     
     
     
-    
+ 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
-        //print("\(indexPath.row)th cell is celected")
-        
-        //tableView.deselectRow(at: indexPath, animated: true)
+        print("selected")
+
         selectUrl = articles[indexPath.row][1]
         guard let url = URL(string: selectUrl) else { return }
-            let safariController = SFSafariViewController(url: url)
-            present(safariController, animated: true, completion: nil)
+        let safariController = SFSafariViewController(url: url)
+        present(safariController, animated: true, completion: nil)
 
     }
+
         
 }
     
